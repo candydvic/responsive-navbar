@@ -1,0 +1,99 @@
+*{
+    margin: o;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: fantasy;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: green;
+    color: blue;
+}
+.menu{
+    display: flex;
+    gap: 1em;
+    font-size: 18px;
+}
+.navbar .navlink .menu li{
+    color: white;
+}
+.menu li:hover{
+    transition: 1s ease-in-out;
+    border-radius: 5px;
+    background-color: pink;
+}
+.menu li{
+    padding: 5px 4px;
+}
+.acct{
+    position: relative;
+}
+.dropdown{
+    background-color:blueviolet ;
+    padding: 0.5em 0;
+    position: absolute;
+    display: none;
+    border-radius: 8px;
+    top: 35px;
+}
+.dropdown li{
+    padding: 0.5em 1em;
+    width: 8em;
+    text-align: center;
+}
+.dropdown li:hover{
+    background: rebeccapurple;
+}
+.acct:hover .dropdown{
+    display: block;
+}
+.dropdown li+li{
+    margin-top: 10px;
+}
+input[type="checkedbox"]:checked~.menu{
+        display: block;}
+.handburger{
+    display: none;
+    font-size: 24px;
+    user-select: none;
+}
+@media(max-width:767px) {
+    
+
+.menu li:hover{
+    display: inline-block;
+    background-color: aqua;
+    transition: 1s ease-in-out;
+}
+.dropdown{
+    left: 50px;
+    top: 30px;
+    transform: translateX(35%);
+
+}
+.dropdown li:hover{
+    background-color: brown;
+
+}
+.menu{
+    display: none;
+    position: relative;
+    background-color: beige;
+    right: 0;
+    left: 0;
+    text-align: center;
+    padding: 16px;
+}
+
+}
